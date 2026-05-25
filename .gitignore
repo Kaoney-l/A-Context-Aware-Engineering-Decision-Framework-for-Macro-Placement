@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.so
+*.o
+*.a
+
+# Model checkpoints (large binary files)
+*.pkl
+
+# Benchmark data (downloaded separately)
+benchmark/
+
+# Run results
+results/
+
+# Claude Code local config
+.claude/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# DREAMPlace build artifacts
+DREAMPlace_source/build/
+DREAMPlace_source/lib/
+DREAMPlace_source/obj/
+DREAMPlace_source/dreamplace/version.py
+DREAMPlace_source/dreamplace/ops.zip

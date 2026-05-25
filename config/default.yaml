@@ -1,0 +1,88 @@
+name : CarePlace
+
+seed : 3
+gpu : 0
+use_cuda : True
+
+# PPO parameters
+clip_param : 0.2
+max_grad_norm : 0.5
+ppo_epoch : 10
+gamma : 0.95
+lr : 2.5e-3
+
+# canvas config
+grid : 224
+
+# benchmark
+benchmark_train : [superblue1]
+benchmark_eval : [superblue1]
+
+# training episode
+episode : 1500
+
+# training epoch
+epoch : 10
+
+# buffer size
+buffer_size : 4 # number of trajectory
+
+# training batch size
+batch_size : 64
+
+# masking action soft coefficient
+soft_coefficient : 1
+
+# interval
+log_interval : 25
+test_interval : 25
+save_model : True
+
+# dmp
+n_dmp_eval : 3
+
+# control wire and structural (initial static coefficient, annealed to preference-based)
+wire_coeff : 0.7
+
+# grid soft
+grid_soft_coeff : 4
+
+# reward scaling (min-max, legacy; replaced by dynamic group calibration)
+use_reward_scaling : False
+
+# n macro
+n_macro : 512
+
+# policy eval
+eval_policy : False
+
+# read def from dataset
+dataset_path : None
+
+disable_tqdm : True
+
+# CarePlace-specific hyperparameters
+
+# Perception-guided feedback adjustment
+preference_anneal_start : 0.0    # lambda initial value
+preference_anneal_end : 1.0      # lambda final value
+preference_anneal_episodes : 500  # episodes to anneal over
+
+# GNN encoder
+preference_gnn_in_dim : 5
+preference_gnn_hidden : 64
+preference_gnn_out_dim : 32
+preference_gnn_layers : 2
+
+# Topological interaction descriptor
+preference_topo_hidden : 64
+preference_topo_out_dim : 32
+
+# Spatial encoder
+preference_spatial_dim : 64
+
+# Dynamic group calibration
+calibration_epsilon : 1e-8
+
+# Use perception-guided feedback (if False, falls back to static weighting)
+use_perception_guidance : True
