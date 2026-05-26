@@ -38,19 +38,19 @@ Official implementation of **CarePlace**, a context-aware reward framework for c
 
 Key settings in `config/default.yaml`:
 
-| Parameter | Default | Description |
-|---|---|---|
-| `use_perception_guidance` | `True` | Enable preference-guided feedback and mask weighting |
-| `use_reward_scaling` | `False` | Legacy min-max scaling (replaced by dynamic group calibration) |
-| `wire_coeff` | `0.7` | Initial static trade-off coefficient β₀ |
-| `preference_anneal_start` | `0.0` | Initial λ for preference annealing |
-| `preference_anneal_end` | `1.0` | Final λ for preference annealing |
-| `preference_anneal_episodes` | `500` | Episodes to anneal λ over |
-| `preference_gnn_layers` | `2` | GNN message-passing depth |
-| `preference_gnn_out_dim` | `32` | GNN embedding dimension |
-| `preference_topo_out_dim` | `32` | Topological interaction descriptor output dim |
-| `preference_spatial_dim` | `64` | Spatial encoder output dimension |
-| `calibration_epsilon` | `1e-8` | Numerical stability for dynamic calibration |
+| Parameter                    | Description                                                    |
+| ---------------------------- | -------------------------------------------------------------- |
+| `use_perception_guidance`    | Enable preference-guided feedback and mask weighting           |
+| `use_reward_scaling`         | Legacy min-max scaling (replaced by dynamic group calibration) |
+| `wire_coeff`                 | Initial static trade-off coefficient β₀                        |
+| `preference_anneal_start`    | Initial λ for preference annealing                             |
+| `preference_anneal_end`      | Final λ for preference annealing                               |
+| `preference_anneal_episodes` | Episodes to anneal λ over                                      |
+| `preference_gnn_layers`      | GNN message-passing depth                                      |
+| `preference_gnn_out_dim`     | GNN embedding dimension                                        |
+| `preference_topo_out_dim`    | Topological interaction descriptor output dim                  |
+| `preference_spatial_dim`     | Spatial encoder output dimension                               |
+| `calibration_epsilon`        | Numerical stability for dynamic calibration                    |
 
 ## Usage
 
